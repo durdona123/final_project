@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shopping card</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>
+            function addToCart(){
+                console.log("Shopping Cart Started");
+                var prodId = document.getElementById("prodId").value;
+                console.log("Product ID: " + prodId);
+                var prodDesc = document.getElementById("prodDesc").innerHTML;
+                console.log("Product Desc: " + prodDesc);
+                var prodQty = document.getElementById("prodQty").value;
+                var prodPrice = document.getElementById("prodPrice").value;
+                console.log("Product Qty " + prodQty);
+                console.log("Product Price: " + prodPrice);
+                console.log("Total: " + (prodQty*prodPrice));
+                
+                var cart = [prodId,prodDesc,prodQty,prodPrice,(prodQty*prodPrice)];
+                console.log(cart);
+            }
+         
+        </script>
+        <style>
+               body {
+                background-color:peachpuff;
+                text-align: center;
+                 color: black;
+                  font-style: oblique;
+            }
+           p {
+                font-size:24px;
+                line-height: 40px;
+                height: 40px;
+                padding: 20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+             <button onclick="window.location.href='index.html';">Home</button>
+             <button onclick="window.location.href='about_us';">About Us</button>
+       <button onclick="window.location.href='contact.us.html';">Contact Us</button>
+       <button onclick="window.location.href='login.html';">Sign Up</button>
+        <button onclick="window.location.href='shopping_card.html';">Shopping Card</button>
+            <img src="" alt="Item added to cart">
+            <br>
+            <p>This is the best TV.</p>
+            <p>Price $200</p>
+            <p>
+                <input type="hidden" name="prodId" id="prodId" value="1">
+                <input type="hidden" name="prodPrice" id="prodPrice" value="200">
+                <input type="number" name="prodQty" id="prodQty" style="width: 50px">
+                <input type="button" name="btn1" id="btn1" value="Add to Cart"
+                       onclick="addToCart()">
+            </p>
+        </div>
+    </body>
+</html>
